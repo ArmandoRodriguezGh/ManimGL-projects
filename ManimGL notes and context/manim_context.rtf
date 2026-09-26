@@ -1,0 +1,271 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;\red109\green109\blue109;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;\cssrgb\c50196\c50196\c50196;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww11180\viewh8060\viewkind0
+\deftab720
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\fs28 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 How much do you know about Manus the animation github project created by 3Blue1Brown\
+Just a quick note on the name: the project is called Manim (not "Manus") \'97 short for Math Animation. Here's what I know about it:\
+What it is: Manim is an animation engine for explanatory math videos, used to create precise animations programmatically. It was created by Grant Sanderson, the person behind the YouTube channel 3Blue1Brown.\
+Origin: This repository began as a personal project by the author of 3Blue1Brown for the purpose of animating those videos. The video-specific code (the actual scenes from his videos) is available in a separate 3b1b/videos repository.\
+Two versions exist: In 2020, a group of developers forked it into what is now the community edition (ManimCE), with a goal of being more stable, better tested, quicker to respond to community contributions, and friendlier to get started with. The original repo is now called ManimGL (uses OpenGL for rendering), while the fork is maintained at ManimCommunity/manim.\
+Tech stack: Manim runs on Python 3.6 or higher, and system requirements include FFmpeg, OpenGL, and LaTeX (optional, for rendering math equations).\
+Popularity: The 3b1b/manim repo has around 86,900 stars and 7,300 forks on GitHub.\
+Interactive workflow: Running manimgl with the -se flag drops you into an interactive mode at a specific line of a file, like a debugger, with an iPython terminal that can be used to interact with the scene.\
+Video code: The 3b1b/videos repo contains the code used to generate the explanatory math videos found on 3Blue1Brown, though older projects may have code dependent on older versions of manim and may not run out of the box.\
+In short, Manim is a powerful Python library for making beautiful math animations programmatically, and it's the engine behind all of 3Blue1Brown's iconic visuals. Were you looking to use it for something specific?\
+\
+Is it possible to feed a repository into claude and get back meaningful results such as animations using this Manim?\
+Yes, absolutely! There are a few different ways to approach this, depending on what you want to do:\
+Feeding a repo to Claude: You can share Manim code with Claude by pasting files directly into the chat, uploading files, or sharing relevant snippets. Claude has a large context window, so it can handle reasonably sized codebases. For a full repo, you'd typically share the most relevant files rather than everything.\
+What Claude can do with Manim code:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Read and explain existing Manim scenes\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write new Manim animation scripts from scratch (e.g., "animate a Fourier transform")\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Debug or modify existing scenes\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Convert a math concept or description into a working .py Manim scene\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Actually running and rendering the animations: This is the key constraint \'97 Claude can write the Manim Python code, but Manim itself needs to be installed and run locally (or in a cloud environment) to actually render the video. Claude can't render video files directly in this chat.\
+However, there are a few workarounds:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Run it yourself locally \'97 Claude writes the .py scene file, you run manimgl or manim on your machine to render it\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Use Claude in a coding environment \'97 tools like Claude Code (the CLI) can write and execute code, so it could potentially run Manim if it's installed\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Online Manim editors \'97 sites like {\field{\*\fldinst{HYPERLINK "https://editor.manim.community/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 manim.community}} let you run Manim in the browser; Claude can write the code and you paste it there\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 What would you like to do? If you share a repo or describe what you want animated, I can write you a working Manim scene right now that you could run or paste into an online editor.\
+I'm trying to fun a python script: class AnimatingMethods(Scene): def construct(self): grid = OldTex(r"\\pi").get_grid(10, 10, height=4) self.add(grid) # You can animate the application of mobject methods with the # ".animate" syntax: self.play(grid.animate.shift(LEFT)) # Alternatively, you can use the older syntax by passing the # method and then the arguments to the scene's "play" function: self.play(grid.shift, LEFT) # Both of those will interpolate between the mobject's initial # state and whatever happens when you apply that method. # For this example, calling grid.shift(LEFT) would shift the # grid one unit to the left, but both of the previous calls to # "self.play" animate that motion. # The same applies for any method, including those setting colors. self.play(grid.animate.set_color(YELLOW)) self.wait() self.play(grid.animate.set_submobject_colors_by_gradient(BLUE, GREEN)) self.wait() self.play(grid.animate.set_height(TAU - MED_SMALL_BUFF)) self.wait() # The method Mobject.apply_complex_function lets you apply arbitrary # complex functions, treating the points defining the mobject as # complex numbers. self.play(grid.animate.apply_complex_function(np.exp), run_time=5) self.wait() # Even more generally, you could apply Mobject.apply_function, # which takes in functions form R^3 to R^3 self.play( grid.animate.apply_function( lambda p: [ p[0] + 0.5 * math.sin(p[1]), p[1] + 0.5 * math.sin(p[0]), p[2] ] ), run_time=5, ) self.wait()\
+I don't run this through a file on just any IDE right? it has to be a special one how do I do that? For reference I did all of this already:\
+Mac OSX Install FFmpeg, LaTeX in terminal using homebrew. brew install ffmpeg mactex 
+\f1 \uc0\u55357 \u56481 
+\f0  An alternative to heavyweight MacTeX bundle. To avoid installing the full MacTeX bundle, which is ~6GB, you can alternatively install the lightweight BasicTeX and then gradually add only the LaTeX packages you actually need. A list of packages sufficient to run examples can be found here. For an overview of the MacTeX installer bundles, see https://www.tug.org/mactex/. If you are using an ARM-based processor, install Cairo. arch -arm64 brew install pkg-config cairo Install latest version of manim using these command. git clone https://github.com/3b1b/manim.git cd manim pip install -e . manimgl example_scenes.py OpeningManimExample (make sure to add manimgl to path first.)\
+Good news \'97 you don't need a special IDE. Since you've already installed ManimGL, you just use any text editor + your Terminal. Here's exactly what to do:\
+Step 1: Save your script Save that code to a .py file anywhere on your Mac. For example:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 ~/Desktop/my_scene.py\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Make sure to add the necessary imports at the top of the file:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 from manim import *\
+import numpy as np\
+import math\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Step 2: Open Terminal and navigate to the file\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 cd ~/Desktop\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Step 3: Run it with manimgl\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 manimgl my_scene.py AnimatingMethods\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 The format is always: manimgl <filename.py> <ClassName>\
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Useful flags you can add:\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth453\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3870\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+\cf0 \strokec2 Flag\cell 
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+\cf0 What it does\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth453\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3870\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 -o\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Renders and opens the video file\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth453\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3870\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 -w\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Writes to file without opening a window\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth453\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3870\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 -s\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Skips to the end, shows final frame only\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth453\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3870\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 -l\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Low quality (faster preview)\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth453\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3870\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 -f\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Fullscreen playback window\cell \lastrow\row
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 So for example:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 manimgl my_scene.py AnimatingMethods -o\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 This renders the animation and opens it as a video file.\
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 One potential issue: The class uses OldTex which is specific to ManimGL (3b1b version). Since you installed from 3b1b/manim, that should be fine. If you get an import error, try changing the import line to:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 from manimlib import *\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 instead of from manim import * since the 3b1b version uses manimlib as its package name.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 I've located the folder with the manim script now I just run this "manimgl my_scene.py AnimatingMethods" right? or do I have to also designate the file with cd?\
+Yes, you need to cd into the folder first! The Terminal always runs commands from wherever you currently are. So the order is:\
+1. First navigate to the folder:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 cd ~/Desktop/manim\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 (or wherever your script is)\
+2. Then run it:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 manimgl my_scene.py AnimatingMethods\
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 How to check you're in the right place before running:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 ls\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 If you can see my_scene.py listed, you're good to go.\
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Alternatively, you can skip the cd entirely by just giving the full path:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 manimgl ~/Desktop/manim/my_scene.py AnimatingMethods\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 But the cd first approach is easier and less error-prone while you're getting started.\
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Quick tip for finding the exact path: In Finder, just drag and drop the folder into your Terminal window and it will automatically type the full path for you. So you can type cd (with a space) and then drag the folder in.\
+I keep on getting the following error: verxta@Verxtas-MacBook-Pro manim % cd AnimatingMethods.py cd: not a directory: AnimatingMethods.py verxta@Verxtas-MacBook-Pro manim % manimgl my_scene.py AnimatingMethods Traceback (most recent call last): File "/Library/Frameworks/Python.framework/Versions/3.13/bin/manimgl", line 5, in <module> from manimlib.main import main File "/Users/verxta/manim/manimlib/init.py", line 39, in <module> from manimlib.mobject.coordinate_systems import * File "/Users/verxta/manim/manimlib/mobject/coordinate_systems.py", line 22, in <module> from manimlib.mobject.types.surface import ParametricSurface File "/Users/verxta/manim/manimlib/mobject/types/surface.py", line 5, in <module> import trimesh ModuleNotFoundError: No module named 'trimesh'\
+Even when I tried running the example test file that they suggest\
+Two things to address here!\
+Mistake 1: You tried to cd into the .py file \'97 cd only works on folders, not files. You were already in the right place (manim folder), you just needed to run manimgl directly.\
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 The real problem: missing trimesh module\
+Just run this to install it:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 pip install trimesh\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Then try again:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 manimgl example_scenes.py OpeningManimExample\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 If it throws another ModuleNotFoundError for a different module, the easiest fix is to reinstall all dependencies at once from inside the manim folder:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 pip install -r requirements.txt\
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Potential bigger issue \'97 Python 3.13\
+I can see from your error you're running Python 3.13, but ManimGL was designed for Python 3.8 or 3.9. This could cause problems beyond just trimesh. If you keep getting errors after installing trimesh, you may need to create a virtual environment with an older Python version:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 # Install pyenv to manage Python versions\
+brew install pyenv\
+\
+# Install Python 3.9\
+pyenv install 3.9\
+\
+# Set it locally inside the manim folder\
+pyenv local 3.9\
+\
+# Then reinstall\
+pip install -e .\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Try the trimesh fix first and let me know what happens!\
+I'm not sure what this is referring to: ManimGL v1.7.2 2026-06-10 19:57:22.583 Python[5108:5068802] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/7h/rynw3b_90w90bk7kdmfk6ys80000gn/T/org.python.python.savedState Traceback (most recent call last): File "/Library/Frameworks/Python.framework/Versions/3.13/bin/manimgl", line 8, in <module> sys.exit(main()) ~~~~^^ File "/Users/verxta/manim/manimlib/main.py", line 61, in main run_scenes() ~~~~~~~~~~^^ File "/Users/verxta/manim/manimlib/main.py", line 37, in run_scenes scenes = manimlib.extract_scene.main(scene_config, run_config) File "/Users/verxta/manim/manimlib/extract_scene.py", line 189, in main module = get_module(run_config) File "/Users/verxta/manim/manimlib/extract_scene.py", line 182, in get_module module = ModuleLoader.get_module(run_config.file_name, run_config.is_reload) File "/Users/verxta/manim/manimlib/module_loader.py", line 49, in get_module spec.loader.exec_module(module) ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^ File "<frozen importlib._bootstrap_external>", line 1022, in exec_module File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed File "/Users/verxta/Desktop/LeetCode/Python/manim/my_scene.py", line 2, in <module> from manim import * ModuleNotFoundError: No module named 'manim'\
+Simple fix! The issue is in your my_scene.py file. The 3b1b version of Manim uses manimlib not manim as the package name.\
+Open your my_scene.py file and change line 2 from:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 from manim import *\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 To:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 from manimlib import *\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Save the file, then run it again:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 manimgl my_scene.py AnimatingMethods\
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 That's the only change needed. The rest of your script should be fine as-is since OldTex, Scene, LEFT, YELLOW etc. all come from manimlib.\
+Now I'm getting this error: ManimGL v1.7.2 2026-06-10 19:58:39.157 Python[5146:5070652] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/7h/rynw3b_90w90bk7kdmfk6ys80000gn/T/org.python.python.savedState Traceback (most recent call last): File "/Library/Frameworks/Python.framework/Versions/3.13/bin/manimgl", line 8, in <module> sys.exit(main()) ~~~~^^ File "/Users/verxta/manim/manimlib/main.py", line 61, in main run_scenes() ~~~~~~~~~~^^ File "/Users/verxta/manim/manimlib/main.py", line 39, in run_scenes scene.run() ~~~~~~~~~^^ File "/Users/verxta/manim/manimlib/scene/scene.py", line 156, in run self.construct() ~~~~~~~~~~~~~~^^ File "/Users/verxta/Desktop/LeetCode/Python/manim/my_scene.py", line 8, in construct grid = OldTex(r"\\pi").get_grid(10, 10, height=4) ^^^^^^ NameError: name 'OldTex' is not defined\
+Good progress \'97 it's loading now! This is a simple fix. OldTex was renamed in newer versions of ManimGL. Just replace it with Tex.\
+In your my_scene.py, change line 8 from:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 grid = OldTex(r"\\pi").get_grid(10, 10, height=4)\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 To:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 grid = Tex(r"\\pi").get_grid(10, 10, height=4)\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Save and run again:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 manimgl my_scene.py AnimatingMethods\
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 If you get another NameError for something else in the script, the pattern is the same \'97 these example scenes in the repo were written for older versions of ManimGL and some class names have changed. Just let me know what the next error says and I'll tell you exactly what to swap it out for!\
+The animation loaded for a second before promptly disappearing ending up with this error in the terminal screen:\
+ManimGL v1.7.2 2026-06-10 19:59:55.730 Python[5152:5071948] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/7h/rynw3b_90w90bk7kdmfk6ys80000gn/T/org.python.python.savedState Traceback (most recent call last): File "/Library/Frameworks/Python.framework/Versions/3.13/bin/manimgl", line 8, in <module> sys.exit(main()) ~~~~^^ File "/Users/verxta/manim/manimlib/main.py", line 61, in main run_scenes() ~~~~~~~~~~^^ File "/Users/verxta/manim/manimlib/main.py", line 39, in run_scenes scene.run() ~~~~~~~~~^^ File "/Users/verxta/manim/manimlib/scene/scene.py", line 156, in run self.construct() ~~~~~~~~~~~~~~^^ File "/Users/verxta/Desktop/LeetCode/Python/manim/my_scene.py", line 17, in construct self.play(grid.shift, LEFT) ~~~~~~~~~^^^^^^^^^^^^^^^^^^ File "/Users/verxta/manim/manimlib/scene/scene.py", line 322, in wrapper func(self, *args, **kwargs) ~~~~^^^^^^^^^^^^^^^^^^^^^^^ File "/Users/verxta/manim/manimlib/scene/scene.py", line 587, in play animations = list(map(prepare_animation, proto_animations)) File "/Users/verxta/manim/manimlib/animation/animation.py", line 216, in prepare_animation raise TypeError(f"Object \{anim\} cannot be converted to an animation") TypeError: Object <bound method Mobject.shift of <manimlib.mobject.types.vectorized_mobject.VGroup object at 0x10f9c3b60>> cannot be converted to an animation\
+Great progress \'97 the animation actually started! This error is on line 17. The script is using an old syntax that ManimGL no longer supports. The comment in the code even warns it's the "older syntax"!\
+Change line 17 from:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 self.play(grid.shift, LEFT)\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 To:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 self.play(grid.animate.shift(LEFT))\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 So your full construct method should have both lines using the .animate syntax:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 self.play(grid.animate.shift(LEFT))  # line 15\
+self.play(grid.animate.shift(LEFT))  # line 17 - fixed\
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Since this script was written to demonstrate both old and new syntax, and the old syntax is broken, just use .animate everywhere going forward. It's the modern way and works reliably in ManimGL v1.7.2.\
+Save and run again:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 manimgl my_scene.py AnimatingMethods\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 You're very close \'97 each error has been smaller than the last!\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \
+}
